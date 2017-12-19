@@ -17,11 +17,15 @@ class SearchBar extends Component {
         return this.setState({term: event.target.value});
     }
 
+    // onMouseClick() {
+    //     event.target
+    // }
+
     render() {
         return (
             <div>
-                <input onChange={this.onInputChange} />
-                Value of input : {this.state.term}
+                <input onChange={this.onInputChange.bind(this)} value={this.state.term} />
+                {/* <button onClick={this.onMouseClick.bind(this)}></button> */}
             </div>
         )
     }
